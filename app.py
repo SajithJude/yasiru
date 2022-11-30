@@ -116,7 +116,18 @@ def user_report():
       'age':age,
       'skin':skin
     }
-    report_data = pd.DataFrame(user_report_data, index=[0])
+    user_report_data2 = {
+      'num_preg':pregnancies,
+      't3':glucose,
+      'tt4':bp,
+      't4u':skinthickness,
+      'fti':insulin,
+      'tbg':bmi,
+      'dpf':dpf,
+      'age':age,
+      'using_thyroxine':skin
+    }
+    report_data = pd.DataFrame(user_report_data2, index=[0])
     return report_data
 
 
