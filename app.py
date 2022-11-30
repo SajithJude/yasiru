@@ -38,7 +38,7 @@ html_temp1 = """
 st.markdown(html_temp1, unsafe_allow_html=True)
 activities=['SVM', 'RandomForest', 'GridSearchCV', 'Logistic Regression']
 option=st.sidebar.selectbox('Which model would you like to use?',activities)
-st.sidebar.header('Patient Data')
+# st.sidebar.header('Patient Data')
 
 
 if st.checkbox("About Dataset"):
@@ -60,9 +60,9 @@ if st.checkbox("About Dataset"):
 sns.set_style("darkgrid")
 
 # VISUALIZATION
-if st.checkbox("Exploratory Data Analysis (EDA)"):
-    pr = ProfileReport(df, explorative=True)
-    st.header('**Input DataFrame**')
+# if st.checkbox("Exploratory Data Analysis (EDA)"):
+#     pr = ProfileReport(df, explorative=True)
+#     st.header('**Input DataFrame**')
     # st.write(df)
     # st.write('---')
     # st.header('**Profiling Report**')
