@@ -38,7 +38,7 @@ html_temp1 = """
 st.markdown(html_temp1, unsafe_allow_html=True)
 activities=['SVM', 'RandomForest', 'GridSearchCV', 'Logistic Regression']
 option=st.sidebar.selectbox('Which model would you like to use?',activities)
-# st.sidebar.header('Patient Data')
+st.sidebar.header('Patient Data')
 
 
 if st.checkbox("About Dataset"):
@@ -60,9 +60,9 @@ if st.checkbox("About Dataset"):
 sns.set_style("darkgrid")
 
 # VISUALIZATION
-# if st.checkbox("Exploratory Data Analysis (EDA)"):
-#     pr = ProfileReport(df, explorative=True)
-#     st.header('**Input DataFrame**')
+if st.checkbox("Exploratory Data Analysis (EDA)"):
+    pr = ProfileReport(df, explorative=True)
+    st.header('**Input DataFrame**')
     # st.write(df)
     # st.write('---')
     # st.header('**Profiling Report**')
@@ -78,19 +78,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, rand
 
 
 # Training Data
-# if st.checkbox("Train-Test Datasets"):
-    # st.subheader("X_train")
-    # st.write(X_train.head())
-    # st.write(X_train.shape)
-    # st.subheader("y_train")
-    # st.write(y_train.head())
-    # st.write(y_train.shape)
-    # st.subheader("X_test")
-    # st.write(X_test.head())
-    # st.write(X_test.shape)
-    # st.subheader("y_test")
-    # st.write(y_test.head())
-    # st.write(y_test.shape)
+if st.checkbox("Train-Test Datasets"):
+    st.subheader("X_train")
+    st.write(X_train.head())
+    st.write(X_train.shape)
+    st.subheader("y_train")
+    st.write(y_train.head())
+    st.write(y_train.shape)
+    st.subheader("X_test")
+    st.write(X_test.head())
+    st.write(X_test.shape)
+    st.subheader("y_test")
+    st.write(y_test.head())
+    st.write(y_test.shape)
 
 
 # FUNCTION
@@ -122,8 +122,8 @@ def user_report():
 
 # PATIENT DATA
 user_data = user_report()
-# st.subheader('Patient Data')
-# st.write(user_data)
+st.subheader('Patient Data')
+st.write(user_data)
 
 
 # MODELS
