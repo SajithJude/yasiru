@@ -78,19 +78,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, rand
 
 
 # Training Data
-if st.checkbox("Train-Test Datasets"):
-    st.subheader("X_train")
-    st.write(X_train.head())
-    st.write(X_train.shape)
-    st.subheader("y_train")
-    st.write(y_train.head())
-    st.write(y_train.shape)
-    st.subheader("X_test")
-    st.write(X_test.head())
-    st.write(X_test.shape)
-    st.subheader("y_test")
-    st.write(y_test.head())
-    st.write(y_test.shape)
+# if st.checkbox("Train-Test Datasets"):
+#     st.subheader("X_train")
+#     st.write(X_train.head())
+#     st.write(X_train.shape)
+#     st.subheader("y_train")
+#     st.write(y_train.head())
+#     st.write(y_train.shape)
+#     st.subheader("X_test")
+#     st.write(X_test.head())
+#     st.write(X_test.shape)
+#     st.subheader("y_test")
+#     st.write(y_test.head())
+#     st.write(y_test.shape)
 
 
 # FUNCTION
